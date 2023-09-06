@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f7f6;
+    font-family: 'GFS Didot', serif;
+    color: #a17d60;
+}
+
+a {
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-weight: bold;
+}
+
+.brand {
+    width: 7%;
+}
+
+.navlinks {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    position: relative;
+    height: 85vh;
+}
+
+.jumbo {
+    position: relative;
+    padding: 0 3rem 3rem 3rem;
+    height: 40vh;
+    overflow: hidden;
+}
+
+.jumbo h1 {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    padding: 1rem;
+    width: 60%;
+    translate: -50%;
+    text-align: center;
+    cursor: default;
+}
+
+.margem {
+    margin: 1rem;
+}
+
+.busca-index {
+    display: flex;
+    justify-content: center;
+}
+
+.busca-index form {
+    width: 50%;
+}
+
+input {
+    border: 1px solid #b59f8a;
+    padding: 0.5rem;
+}
+
+.busca-index input{
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn {
+    border: none;
+    background-color: #502515;
+    width: 7rem;
+    height: 2rem;
+    color: white;
+}
+
+.self-center {
+    align-self: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-semfundo {
+    border: none;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    /* grid-template-rows: 22rem; */
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
+    margin: 0 7rem;
+}
+
+hr {
+    background-color: #b59f8a;
+    height: 1px;
+    border: none;
+    width: 100%;   
+}
+
+footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-rodape {
+    align-items: center;
+}
+
+.sobre {
+    font-size: x-large;
+    margin: 1rem 10rem;
+    text-align: center;
+}
+
+.centralizado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.campo-form {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho-login {
+    text-align: center;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
