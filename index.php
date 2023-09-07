@@ -17,18 +17,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
 </section>
 
 <section class="grade">
-    <div>
+    <a href="">
         <h2>ROUPAS</h2>
         <img src="https://source.unsplash.com/random/1920x1080/?shirts" alt="" width="100%">
-    </div>
-    <div>
+    </a>
+
+    <a href="">
         <h2>CALÇADOS</h2>
         <img src="https://source.unsplash.com/random/1920x1080/?shoes" alt="" width="100%">
-    </div>
-    <div>
+    </a>
+
+    <a href="">
         <h2>ACESSÓRIOS</h2>
         <img src="https://source.unsplash.com/random/1920x1080/?bijouterie" alt="" width="100%">
-    </div>
+    </a>
 </section>
 
 <?php

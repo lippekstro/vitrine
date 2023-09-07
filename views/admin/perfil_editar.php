@@ -4,11 +4,12 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
 
 <section class="form-login">
     <div class="cabecalho-login">
-        <h1 class="margem">CRIE UMA NOVA CONTA</h1>
-        <p class="margem">JÁ REGISTRADO?<a href="/vitrine/views/login.php">LOGIN</a></p>
+        <h1 class="margem">EDITE SEU PERFIL</h1>
     </div>
 
     <form action="" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="id_usuario" value="">
+
         <div class="grid-form">
             <div>
                 <div class="campo-form">
@@ -22,13 +23,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
                 </div>
 
                 <div class="campo-form">
-                    <label for="senha">SENHA</label>
-                    <input type="password" name="senha" id="senha" placeholder="sua senha">
+                    <label for="nasc">NASCIMENTO</label>
+                    <input type="date" name="nasc" id="nasc" max="<?= date('Y-m-d') ?>">
                 </div>
 
                 <div class="campo-form">
-                    <label for="nasc">NASCIMENTO</label>
-                    <input type="date" name="nasc" id="nasc" max="<?= date('Y-m-d') ?>">
+                    <label for="imagem">FOTO</label>
+                    <input type="file" name="imagem" id="imagem" placeholder="">
                 </div>
             </div>
 
@@ -56,12 +57,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
         </div>
 
         <div class="campo-form">
-            <label for="imagem">FOTO</label>
-            <input type="file" name="imagem" id="imagem" placeholder="">
-        </div>
-
-        <div class="campo-form">
-            <button class="btn self-center">CADASTRAR</button>
+            <button class="btn self-center">ATUALIZAR</button>
         </div>
     </form>
 </section>

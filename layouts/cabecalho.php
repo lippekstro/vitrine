@@ -24,6 +24,17 @@
                 <a href="/vitrine/index.php">INICIO</a>
                 <a href="/vitrine/views/sobre.php">SOBRE</a>
                 <a href="/vitrine/views/login.php">LOGIN</a>
+
+                <div class="grupo-perfil dropdown">
+                    <img src="https://source.unsplash.com/random/1920x1080/?robot" alt="" width="40rem" height="40rem" class="foto-perfil">
+                    <a href="/vitrine/views/admin/painel.php">PAINEL</a>
+
+                    <div class="dropdown-content">
+                        <a href="/vitrine/views/admin/perfil_editar.php">EDITAR PERFIL</a>
+                        <a href="/vitrine/views/admin/senha_editar.php">EDITAR SENHA</a>
+                        <a href="#">SAIR</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>

@@ -2,10 +2,10 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
 ?>
 
-<section class="centralizado w-25">
+<section class="form-login">
     <div class="cabecalho-login">
-        <h1 class="margem">Login</h1>
-        <p class="margem">Entre para continuar</p>
+        <h1 class="margem">LOGIN</h1>
+        <p class="margem">ENTRE PARA CONTINUAR</p>
     </div>
 
     <form action="">
@@ -27,8 +27,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
     <div class="text-center">
         <a href="/vitrine/views/cadastro.php">CADASTRE-SE</a>
     </div>
-
 </section>
+
 
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/rodape.php';
