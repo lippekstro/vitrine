@@ -31,6 +31,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/_cabecalho.php';
     </div>
 </section>
 
+
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/_rodape.php';
 ?>
