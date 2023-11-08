@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/_cabecalho.php';
 ?>
 
 <section class="sobre">
@@ -7,5 +7,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/cabecalho.php';
 </section>
 
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/rodape.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/_rodape.php';
 ?>

@@ -1,6 +1,6 @@
 </main>
 
-<footer class="flex margem">
+<footer class="flex">
     <div class="links-rodape flex">
         <a href="">inicio</a>
         <span> | </span>

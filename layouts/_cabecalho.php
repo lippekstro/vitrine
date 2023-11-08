@@ -1,3 +1,21 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/configs/sessions.php';
+
+$logado = isset($_SESSION['usuario']);
+if ($logado) {
+    $id = $_SESSION['usuario']['id'];
+    $nome = $_SESSION['usuario']['nome'];
+    $email = $_SESSION['usuario']['email'];
+    $nivel = $_SESSION['usuario']['nivel_acesso'];
+    $foto = $_SESSION['usuario']['img_usuario'];
+    
+    $admin = $nivel > 1 ? true : false;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -23,7 +41,12 @@
             <div class="navlinks">
                 <a href="/vitrine/index.php">INICIO</a>
                 <a href="/vitrine/views/sobre.php">SOBRE</a>
-                <a href="/vitrine/views/login.php">LOGIN</a>
+                <?php if (!$logado) : ?>
+                    <a href="/vitrine/views/login.php">LOGIN</a>
+                <?php else : ?>
+                    <a href="/vitrine/controllers/logout_controller.php">LOGOUT</a>
+                    <a href="/vitrine/views/perfil.php">PERFIL</a>
+                <?php endif; ?>
             </div>
         </nav>
     </header>
