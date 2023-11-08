@@ -1,6 +1,9 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/configs/sessions.php';
 
+Session::criaResumeSessao();
+Session::encerraInativo();
+
 $logado = isset($_SESSION['usuario']);
 if ($logado) {
     $id = $_SESSION['usuario']['id'];

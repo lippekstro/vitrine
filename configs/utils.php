@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/configs/sessions.php';
 
 class Utilidades
 {
@@ -32,5 +33,27 @@ class Utilidades
         $s = htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
         $s = trim($s);
         return $s;
+    }
+
+    public static function isLogado()
+    {
+        Session::criaResumeSessao();
+
+        if (isset($_SESSION['usuario'])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static function isAdmin()
+    {
+        Session::criaResumeSessao();
+
+        if (Utilidades::isLogado() && $_SESSION['usuario']['nivel_acesso'] > 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -3,8 +3,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/_cabecalho.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/models/categoria.php';
 
 if (isset($_COOKIE['msg'])) {
-    setcookie('msg', '', time() - 3600, '/aulas/');
-    setcookie('tipo', '', time() - 3600, '/aulas/');
+    setcookie('msg', '', time() - 3600, '/vitrine/');
+    setcookie('tipo', '', time() - 3600, '/vitrine/');
 }
 
 try {

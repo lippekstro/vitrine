@@ -1,5 +1,15 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/layouts/_cabecalho.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/configs/utils.php';
+
+if (!Utilidades::isAdmin()) {
+    setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/vitrine/');
+    setcookie('tipo', 'perigo', time() + 3600, '/vitrine/');
+    header('Location: /vitrine/index.php');
+    exit();
+}
+
+
 ?>
 
 <section class="sec-centro">
