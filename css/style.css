@@ -114,16 +114,7 @@ form {
 
 .titulo-cat {
     text-transform: uppercase;
-    font-size: 1.5vw;
-}
-
-.btn:hover {
-    background-color: #502515;
-}
-
-.titulo-cat {
-    text-transform: uppercase;
-    font-size: 1.5vw;
+    font-size: 15px;
 }
 
 .self-center {
@@ -153,7 +144,7 @@ form {
 }
 
 .grade-produtos {
-    grid-template-columns: 15rem 15rem 15rem 15rem;
+    grid-template-columns: repeat(4, 20rem);
 }
 
 .sec-centro {
@@ -196,6 +187,15 @@ footer {
     margin: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.radios {
+    display: flex;
+}
+
+.radios input[type=radio]{
+    width: revert;
+    margin-right: 0.5rem;
 }
 
 .cabecalho-login {
@@ -259,6 +259,7 @@ footer {
 table {
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
 }
 
 th,
@@ -276,35 +277,6 @@ td {
 
 .ficha-usuario div {
     padding: 1rem;
-}
-
-table {
-    width: 100%;
-    text-align: center;
-}
-
-table,
-th,
-td {
-    border: 1px solid #a17d60;
-    border-collapse: collapse;
-    padding: 1rem;
-}
-
-.ficha-usuario {
-    display: grid;
-    grid-template-columns: 15% auto;
-    justify-content: start;
-    text-align: center;
-}
-
-.ficha-usuario div {
-    padding: 1rem;
-}
-
-table {
-    width: 100%;
-    text-align: center;
 }
 
 table,
@@ -333,6 +305,21 @@ td {
 
 .alert-info {
     background-color: #0dcaf0;
+}
+
+.filtros-produtos{
+    display: grid;
+    grid-template-columns: 15% auto auto auto;
+    grid-template-areas: 'filtros produtos produtos produtos';
+}
+
+#filtros {
+    grid-area: filtros;
+    padding: 1rem;
+}
+
+#produtos{
+    grid-area: produtos;
 }
 
 @media only screen and (max-width: 1200px) {
