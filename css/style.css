@@ -153,16 +153,7 @@ form {
 }
 
 .grade-produtos {
-    grid-template-columns: 10rem 10rem 10rem 10rem;
-}
-
-.sec-centro {
-    display: flex;
-    justify-content: center;
-}
-
-.grade-produtos {
-    grid-template-columns: 10rem 10rem 10rem 10rem;
+    grid-template-columns: 15rem 15rem 15rem 15rem;
 }
 
 .sec-centro {

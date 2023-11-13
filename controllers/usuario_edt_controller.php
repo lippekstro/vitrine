@@ -3,7 +3,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . '/vitrine/models/usuario.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . '/vitrine/configs/utils.php';
 require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/configs/sessions.php";
 
-if (!isset($_SESSION['usuario'])) {
+if (!Utilidades::isLogado()) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/vitrine/');
     setcookie('tipo', 'perigo', time() + 3600, '/vitrine/');
     header('Location: /vitrine/index.php');
