@@ -226,44 +226,16 @@ footer {
     border-radius: 50%;
 }
 
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: max-content;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    bottom: -10rem;
-    right: -2rem;
-    padding: 0.5rem;
-}
-
-.dropdown-content a {
-    padding: 1rem;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #a17d6083;
-}
-
 table {
     width: 100%;
-    border-collapse: collapse;
     text-align: center;
 }
 
+table,
 th,
 td {
-    border: 1px solid #DAD6CB;
+    border: 1px solid #a17d60;
+    border-collapse: collapse;
     padding: 1rem;
 }
 
@@ -275,14 +247,6 @@ td {
 }
 
 .ficha-usuario div {
-    padding: 1rem;
-}
-
-table,
-th,
-td {
-    border: 1px solid #a17d60;
-    border-collapse: collapse;
     padding: 1rem;
 }
 
@@ -321,7 +285,13 @@ td {
     grid-area: produtos;
 }
 
+.sessao-tabela {
+    overflow-x: auto;
+}
 
+.coluna-img{
+    width: 25%;
+}
 
 @media only screen and (min-width: 1200px) {
     .grade-produtos {
@@ -386,10 +356,6 @@ td {
 
     .grid-form {
         display: block;
-    }
-
-    .dropdown-content {
-        bottom: -13rem;
     }
 
     .filtros-produtos {

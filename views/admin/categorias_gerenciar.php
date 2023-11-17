@@ -38,11 +38,12 @@ try {
     <?php endif; ?>
 <?php endif; ?>
 
-<section>
+<section class="sessao-tabela">
 <h1 class="margem text-center">Gerenciar Categorias</h1>
     <table>
         <tr>
             <th>Nome</th>
+            <th class="coluna-img">Imagem</th>
             <th colspan="2">
                 <a href="/vitrine/views/admin/categoria_cadastro.php" class="btn">Adicionar</a>
             </th>
@@ -51,6 +52,7 @@ try {
         <?php foreach($categorias as $c) : ?>
         <tr>
             <td><?= $c['nome_categoria'] ?></td>
+            <td><img src="data:image;charset=utf8;base64,<?= base64_encode($c['img_categoria']); ?>" width="100%"></td>
             <td>
                 <a href="/vitrine/views/admin/categoria_editar.php?id=<?= $c['id_categoria'] ?>" class="btn">Editar</a>
             </td>
