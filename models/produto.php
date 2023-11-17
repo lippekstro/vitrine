@@ -19,7 +19,7 @@ class Produto
 
     public function carregar()
     {
-        $query = "SELECT nome_produto, preco, img_produto, id_categoria FROM produtos WHERE id_produto = :id_produto";
+        $query = "SELECT * FROM produtos WHERE id_produto = :id_produto";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_produto', $this->id_produto);

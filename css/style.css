@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
-
+@font-face {
+    font-family: GFSDidot;
+    src: url('/vitrine/fonts/GFSDidot-Regular.ttf');
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #f8f7f6;
-    font-family: 'GFS Didot', serif;
+    font-family: GFSDidot, serif;
     color: #a17d60;
 }
 
@@ -100,9 +102,6 @@ form {
 .btn {
     border: none;
     background-color: rgba(82, 37, 20, 0.5);
-    width: 7rem;
-    height: 2rem;
-    padding: 0.5rem;
     color: white;
     cursor: pointer;
     padding: 0.5rem;
@@ -193,7 +192,7 @@ footer {
     display: flex;
 }
 
-.radios input[type=radio]{
+.radios input[type=radio] {
     width: revert;
     margin-right: 0.5rem;
 }
@@ -271,7 +270,7 @@ td {
 .ficha-usuario {
     display: grid;
     grid-template-columns: 15% auto;
-    justify-content: start;
+    justify-content: center;
     text-align: center;
 }
 
@@ -307,7 +306,7 @@ td {
     background-color: #0dcaf0;
 }
 
-.filtros-produtos{
+.filtros-produtos {
     display: grid;
     grid-template-columns: 15% auto auto auto;
     grid-template-areas: 'filtros produtos produtos produtos';
@@ -318,13 +317,25 @@ td {
     padding: 1rem;
 }
 
-#produtos{
+#produtos {
     grid-area: produtos;
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    .grade-produtos {
+        grid-template-columns: repeat(4, 20%);
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     .grade {
-        grid-template-columns: 20rem 20rem;
+        grid-template-columns: 20rem;
+    }
+
+    .filtros-produtos {
+        grid-template-columns: 30% auto auto auto;
     }
 
     .form-login {
@@ -343,6 +354,8 @@ td {
 
     .navlinks {
         flex-direction: column;
+        width: revert;
+        align-items: center;
     }
 
     .jumbo {
@@ -377,5 +390,15 @@ td {
 
     .dropdown-content {
         bottom: -13rem;
+    }
+
+    .filtros-produtos {
+        grid-template-areas: 
+        'filtros filtros filtros filtros'
+        'produtos produtos produtos produtos';
+    }
+
+    .ficha-usuario {
+        grid-template-columns: 30% auto;
     }
 }

@@ -47,8 +47,8 @@ if ($logado) {
                 <?php if (!$logado) : ?>
                     <a href="/vitrine/views/login.php">LOGIN</a>
                 <?php else : ?>
-                    <a href="/vitrine/controllers/logout_controller.php">LOGOUT</a>
                     <a href="/vitrine/views/perfil.php">PERFIL</a>
+                    <a href="/vitrine/controllers/logout_controller.php">LOGOUT</a>
                 <?php endif; ?>
             </div>
         </nav>

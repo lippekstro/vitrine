@@ -20,7 +20,7 @@ class Usuario
 
     public function carregar()
     {
-        $query = "SELECT nome_usuario, img_usuario, email, senha, nivel_acesso FROM usuarios WHERE id_usuario = :id_usuario";
+        $query = "SELECT * FROM usuarios WHERE id_usuario = :id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_usuario', $this->id_usuario);

@@ -32,9 +32,9 @@ try {
 </section>
 
 <?php if ($admin) : ?>
-    <section>
+    <section class="sec-centro">
         <a href="/vitrine/views/admin/categorias_gerenciar.php" class="btn">Gerenciar Categorias</a>
-        <a href="/vitrine/views/admin/produtos_gerenciar.php" class="btn">Gerenciar Produto</a>
+        <a href="/vitrine/views/admin/produtos_gerenciar.php" class="btn">Gerenciar Produtos</a>
     </section>
 <?php endif; ?>
 
