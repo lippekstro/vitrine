@@ -1,10 +1,14 @@
 <?php
+date_default_timezone_set('America/Fortaleza');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/configs/sessions.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/vitrine/configs/utils.php';
 
 Session::criaResumeSessao();
 Session::encerraInativo();
 
-$logado = isset($_SESSION['usuario']);
+$logado = Utilidades::isLogado();
+
+
 if ($logado) {
     $id = $_SESSION['usuario']['id'];
     $nome = $_SESSION['usuario']['nome'];
@@ -12,7 +16,7 @@ if ($logado) {
     $nivel = $_SESSION['usuario']['nivel_acesso'];
     $foto = $_SESSION['usuario']['img_usuario'];
     
-    $admin = $nivel > 1 ? true : false;
+    $admin = Utilidades::isAdmin();
 }
 
 

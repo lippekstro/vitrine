@@ -28,9 +28,8 @@ try {
     $usuario->nome_usuario = $nome;
     $usuario->email = $email;
     $usuario->senha = $senha;
-    if ($imagem) {
-        $usuario->img_usuario = $imagem;
-    }
+    $usuario->img_usuario = $imagem;
+    
     $usuario->criar();
 
     header("Location: /vitrine/views/login.php");
@@ -38,3 +37,4 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
+

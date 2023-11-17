@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header('Location: /vitrine/index.php');
+header('Location: /vitrine/views/login.php');
 exit();
 ?>
