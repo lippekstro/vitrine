@@ -1,7 +1,8 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/models/produto.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/configs/utils.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/configs/sessions.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/configs/utils.php";
+
 
 if (!Utilidades::isAdmin()) {
     setcookie('msg', 'Você não tem permissão para acessar este conteúdo', time() + 3600, '/vitrine/');

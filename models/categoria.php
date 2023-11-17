@@ -5,6 +5,7 @@ class Categoria
 {
     public $id_categoria;
     public $nome_categoria;
+    public $img_categoria;
 
     public function __construct($id_categoria = false)
     {
@@ -16,22 +17,23 @@ class Categoria
 
     public function carregar()
     {
-        $query = "SELECT nome_categoria FROM categorias WHERE id_categoria = :id_categoria";
+        $query = "SELECT * FROM categorias WHERE id_categoria = :id_categoria";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_categoria', $this->id_categoria);
         $stmt->execute();
-
         $categoria = $stmt->fetch();
         $this->nome_categoria = $categoria['nome_categoria'];
+        $this->img_categoria = $categoria['img_categoria'];
     }
 
     public function criar()
     {
-        $query = "INSERT INTO categorias (nome_categoria) VALUES (:nome_categoria)";
+        $query = "INSERT INTO categorias (nome_categoria, img_categoria) VALUES (:nome_categoria, :img)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':nome_categoria', $this->nome_categoria);
+        $stmt->bindValue(':img', $this->img_categoria);
         $stmt->execute();
         $this->id_categoria = $conexao->lastInsertId();
         return $this->id_categoria;
@@ -49,10 +51,11 @@ class Categoria
 
     public function editar()
     {
-        $query = "UPDATE categorias SET nome_categoria = :nome_categoria WHERE id_categoria = :id_categoria";
+        $query = "UPDATE categorias SET nome_categoria = :nome_categoria, img_categoria = :img WHERE id_categoria = :id_categoria";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(":nome_categoria", $this->nome_categoria);
+        $stmt->bindValue(":img", $this->img_categoria);
         $stmt->bindValue(":id_categoria", $this->id_categoria);
         $stmt->execute();
     }

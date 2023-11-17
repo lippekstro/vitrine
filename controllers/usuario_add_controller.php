@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/models/usuario.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/configs/utils.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/configs/sessions.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/vitrine/configs/utils.php";
 
 try {
     $nome = Utilidades::sanitizaString($_POST['nome']);

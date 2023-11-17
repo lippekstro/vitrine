@@ -50,7 +50,7 @@ try {
         <a href="/vitrine/views/produtos.php?categoria=<?= $c['nome_categoria'] ?>">
             <div>
                 <h2 class="titulo-cat"><?= $c['nome_categoria'] ?></h2>
-                <img src="/vitrine/img/dummy.png" alt="" width="100%">
+                <img src="data:image;charset=utf8;base64,<?= base64_encode($c['img_categoria']); ?>" alt="" width="100%">
             </div>
         </a>
     <?php endforeach; ?>

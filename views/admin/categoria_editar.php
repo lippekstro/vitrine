@@ -23,13 +23,18 @@ try {
         <div class="cabecalho-login">
             <h1 class="margem">Atualizar Categoria</h1>
         </div>
-        <form action="/vitrine/controllers/categoria_add_controller.php" method="post">
+        <form action="/vitrine/controllers/categoria_edt_controller.php" method="post" enctype="multipart/form-data">
 
             <input type="hidden" name="id" value="<?= $categoria->id_categoria ?>">
 
             <div class="campo-form">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<?= $categoria->nome_categoria ?>">
+            </div>
+
+            <div class="campo-form">
+                <label for="imagem">Imagem</label>
+                <input type="file" name="imagem" id="imagem">
             </div>
 
             <div class="campo-form">

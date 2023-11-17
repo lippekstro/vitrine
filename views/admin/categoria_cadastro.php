@@ -17,10 +17,15 @@ if (!Utilidades::isAdmin()) {
         <div class="cabecalho-login">
             <h1 class="margem">Cadastro</h1>
         </div>
-        <form action="/vitrine/controllers/categoria_add_controller.php" method="post">
+        <form action="/vitrine/controllers/categoria_add_controller.php" method="post" enctype="multipart/form-data">
             <div class="campo-form">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome">
+            </div>
+
+            <div class="campo-form">
+                <label for="imagem">Imagem</label>
+                <input type="file" name="imagem" id="imagem">
             </div>
 
             <div class="campo-form">

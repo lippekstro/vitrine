@@ -2,7 +2,8 @@ CREATE DATABASE vitrine;
 
 CREATE TABLE categorias (
     id_categoria INT PRIMARY KEY AUTO_INCREMENT,
-    nome_categoria VARCHAR(255) NOT NULL
+    nome_categoria VARCHAR(255) NOT NULL,
+    img_categoria LONGBLOB
 );
 
 CREATE TABLE produtos (
