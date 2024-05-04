@@ -23,7 +23,7 @@ ou
    - Siga as instruções para criar uma nova conta de usuário.
 4. Ajuste o nível de acesso do usuário:
    - Acesse o sistema de gerenciamento do banco de dados.
-   - Encontre o banco correspondente a esse projeto `defi`.
+   - Encontre o banco correspondente a esse projeto `vitrine`.
    - Encontre a tabela de usuários.
    - Altere o nível de acesso do usuário recém-criado para **2**.
 5. Personalize seu perfil:
